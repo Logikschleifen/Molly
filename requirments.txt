@@ -1,0 +1,12 @@
+torch
+torchvision
+torchaudio
+--index-url https://download.pytorch.org/whl/cu121
+transformers
+accelerate
+groq
+PySide6
+opentimelineio
+--upgrade llama-index-llms-nvidia llama-index-embeddings-nvidia llama-index-readers-file
+streamlit
+gradio
