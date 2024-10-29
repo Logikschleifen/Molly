@@ -1,0 +1,7 @@
+PySide6
+opentimelineio
+llama-index-llms-nvidia 
+llama-index-embeddings-nvidia 
+llama-index-readers-file
+stable-ts[fw]
+tk
