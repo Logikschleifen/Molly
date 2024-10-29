@@ -1,11 +1,11 @@
 import TimelineMaker
 import re
-from faster_whisper import WhisperModel 
 from llama_index.llms.nvidia import NVIDIA
 from llama_index.core.llms import ChatMessage, MessageRole
 import os
 import stable_whisper
 import tkinter as tk
+
 systempromt1 = """ You are a Famous Youtube Editor tasked with creating an entertaining video from a streaming vod.
 You must follow these instructions carefully:
 <instructions>
@@ -74,13 +74,6 @@ class molly:
         # Transcribe the audio file with timestamps
         results = model.transcribe_stable(video_path, language="en", word_timestamps=True)
         segments = results.to_dict()["segments"]
-        # print(str(results))
-
-        # print("Transcription: Transcribing with whisper...", end='\r')
-        # model_size = "small.en"
-        # audio_model = WhisperModel(model_size, device="cuda", compute_type="float32")
-
-        # segments, info = audio_model.transcribe(video_path, beam_size=5, language="en")
 
         segmentList = []
         count = 0

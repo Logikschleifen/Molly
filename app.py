@@ -53,7 +53,6 @@ root = tk.Tk()
 root.title("Molly, the AI Video Editor")
 root.configure(bg="#1c1f4a")  # Dark blue background
 
-# Set up the interface elements with light text for readability
 tk.Label(root, text="Molly, the AI Video Editor", font=("Helvetica", 24, "bold"), fg="white", bg="#1c1f4a").grid(row=0, column=0, columnspan=2, pady=10)
 
 # Input fields
@@ -88,13 +87,11 @@ def start_editing():
     except ValueError:
         messagebox.showerror("Error", "Chunk Size must be a number.")
 
-# Style the button to be orange with rounded edges
 style = ttk.Style()
 style.map("TButton",
-          background=[("active", "#ff8b66")],  # Lighter shade on hover
+          background=[("active", "#ff8b66")],  
           foreground=[("active", "orange")])
 
-# Edit button with rounded edges
 edit_button = ttk.Button(root, text="One Click Edit", style="TButton", command=start_editing)
 edit_button.grid(row=5, column=0, columnspan=2, pady=10)
 
@@ -102,5 +99,4 @@ edit_button.grid(row=5, column=0, columnspan=2, pady=10)
 log_widget = tk.Text(root, width=70, height=10, wrap="word", bg="#333333", fg="white", font=("Helvetica", 10))
 log_widget.grid(row=6, column=0, columnspan=2, padx=10, pady=10)
 
-# Run the tkinter main loop
 root.mainloop()
